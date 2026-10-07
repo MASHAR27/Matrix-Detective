@@ -37,4 +37,29 @@ def main_diagonal(matrix):
     print(f"The main diagonal sum is {main_sum}")    
     
 
+
+def sec_diagonal(matrix):
+    sec_sum = 0
+    n = len(matrix)
+    for i in range(n):
+        sec_sum += matrix[i][n-1-i]
+    
+    
+    print(f"The secondary diagonal sum is {sec_sum}")
+    
+
+
+def largest_val(matrix):
+    largest = matrix[0][0]
+    l_row = 0
+    l_col = 0
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if matrix[i][j] > largest:
+                largest = matrix[i][j]
+                l_row = i
+                l_col = j
+    print(f"Largest value is {largest} at index {l_row} {l_col}")
+    
+    
     

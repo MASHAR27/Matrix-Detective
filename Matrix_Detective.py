@@ -63,3 +63,19 @@ def largest_val(matrix):
     
     
     
+
+def transpose_mat(matrix):
+    transpose_matrix = []
+    col_len = len(matrix[0])
+    for i in range(col_len):
+        new_row = []
+        for j in range(len(matrix)):
+            new_row.append(matrix[j][i])
+            
+        transpose_matrix.append(new_row)         
+    print(f"The transposed matrix is {transpose_matrix}")
+ 
+ 
+
+
+ 

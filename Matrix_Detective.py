@@ -77,5 +77,38 @@ def transpose_mat(matrix):
  
  
 
+def count_val_threshold(matrix):
+    threshold = int(input("Please enter the value for which you want to find the number of values above it in the matrix: "))
+    count_thresh = 0
+    for row in matrix:
+        for val in row:
+            if val > threshold:
+                count_thresh += 1
+    print(f"The number of values greater than {threshold} are {count_thresh}")
+    
+    
+print("The detective features:  ")
+print()           
 
- 
+while True:
+    option = int(input("Please enter the corresponding number for the feature that you want to use:  0 - exiting , 1 - searching for a value, 2 - main diagonal sum , 3 - secondary diagonal sum, 4- largest value in the matrix , 5 - transpose of the matrix, 6 - Count values above a threshold  "))
+    if option == 0:
+        break
+    elif option == 1:
+        search_value(matrix)
+    elif option == 2:
+        main_diagonal(matrix)
+    elif option == 3:
+        sec_diagonal(matrix)
+    elif option == 4:
+        largest_val(matrix)
+    elif option == 5:
+        transpose_mat(matrix)
+    elif option ==6 :
+        count_val_threshold(matrix)
+    else:
+        print("Please enter a valid number for the feature")                    
+            
+        
+    
+    

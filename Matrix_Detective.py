@@ -12,9 +12,10 @@ for row in range(matrix_size):
     matrix.append(current_row)    
         
 
-print("This is your customized Matrix:  ",matrix)
+print("This is your customized Matrix:  ")
+for i in range(len(matrix)):
+    print(matrix[i])
 
-print("Now for investigation: ")
 
 def search_value(matrix):
     target = int(input("Enter the value to search for: "))
@@ -27,4 +28,13 @@ def search_value(matrix):
                 
                 
 
-              
+def main_diagonal(matrix):
+    main_sum = 0
+    n = len(matrix)
+    for i in range(n):
+        main_sum += matrix[i][i]
+        
+    print(f"The main diagonal sum is {main_sum}")    
+    
+
+    

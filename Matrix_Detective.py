@@ -12,5 +12,19 @@ for row in range(matrix_size):
     matrix.append(current_row)    
         
 
-print("This is your customised Matrix:  ",matrix)
+print("This is your customized Matrix:  ",matrix)
 
+print("Now for investigation: ")
+
+def search_value(matrix):
+    target = int(input("Enter the value to search for: "))
+    for row in range(len(matrix)):
+        for col in range(len(matrix[row])):
+            if matrix[row][col] == target:
+                print(f"Found {target} at index {row} {col}")
+                
+                
+                
+                
+
+              
